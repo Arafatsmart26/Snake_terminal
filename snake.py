@@ -19,3 +19,10 @@ while not done:
     if msvcrt.kbhit():
         print("you pressed",msvcrt.getch(),"so now i will quit")
         done = True
+
+#Bane
+højde = 50
+brede = 50
+
+#slange
+slange = [hoved=(x,y),krop(x,y)]
