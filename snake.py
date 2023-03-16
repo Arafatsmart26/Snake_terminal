@@ -18,15 +18,7 @@ slangekrop = [(11,10)]
 #frugt
 frugt = [random.randint]
 
-
-        
-        
-
-#vis slange
-
-
-
-
+#mainloop
 done = False
 currentTime = 0
 previousTime = 0
