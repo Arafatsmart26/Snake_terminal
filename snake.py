@@ -16,7 +16,7 @@ slangehoved = (10,10)
 slangekrop = [(11,10)]
 
 #frugt
-frugt = (random.randint(0,bredde-1),random.randint(højde-1,0))
+#wfrugt = (random.randint(0,bredde-1),random.randint(højde-1,0))
 
 #baneloop
 done = False
@@ -48,8 +48,8 @@ while not done:
                     print("@", end = " ")
                 elif slangekrop[0][0] == x and slangekrop[0][1]==y:
                     print ("H",end= " ")
-                elif frugt[0]== x and frugt[1]== y:
-                    print("§", end = " ")
+#               elif frugt[0]== x and frugt[1]== y:
+#                   print("§", end = " ")
                 else:
                     print(".", end = " ")
     
@@ -67,7 +67,6 @@ while not done:
         elif input == "d":
             slangehoved = (x+1, y)
        
-        #frugt
         
 
 
