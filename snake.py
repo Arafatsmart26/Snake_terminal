@@ -13,7 +13,7 @@ højde = 20
 
 #slange
 slangehoved = (10,10)
-slangekrop = [(11,10)]
+slangekrop = [(11,10), (12,10)]
 
 #frugt
 frugt = (random.randint(0, bredde-1),random.randint(0, højde-1))
@@ -55,6 +55,7 @@ while not done:
     
         #bevæg slange
         slangekrop.insert(0,slangehoved)
+        
         slangekrop.pop()
 
 
