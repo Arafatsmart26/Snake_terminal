@@ -51,15 +51,13 @@ while not done:
                 if slangehoved[0]== x and slangehoved[1]== y:
                     if slangehoved == frugt:
                         score +=1
-
                     print("@", end = " ")
                 elif slangekrop[0][0] == x and slangekrop[0][1]==y:
                     print ("H",end= " ")
                 elif frugt[0]== x and frugt[1]== y:
                     print("§", end = " ")
                 else:
-                    print(".", end = " ")
-    
+                    print(".", end = " ") 
         #bevæg slange
         slangekrop.insert(0,slangehoved)
         
