@@ -8,13 +8,13 @@ def random_position():
     return (random.randint(0,20)),(random.randint(0,20))
 
 #Snake-bane
-bredde = 20
+bredde = 20 #integer
 højde = 20
 
 #slange
-slangehoved = (10,10)
+slangehoved = (10, 10) #tuple
 
-slangekrop = [(11,10)]
+slangekrop = [(11,10)] #liste
 
 #frugt
 frugt = (random.randint(0, bredde-1),random.randint(0, højde-1))
@@ -23,11 +23,11 @@ frugt = (random.randint(0, bredde-1),random.randint(0, højde-1))
 score = 0
 
 #baneloop
-done = False
+done = False #boolean
 currentTime = 0
 previousTime = 0
 interval = 500
-input = "a"
+input = "a" #string
 while not done:
     if msvcrt.kbhit():
         ch = msvcrt.getch()
@@ -49,19 +49,20 @@ while not done:
             print("")
             for x in range(bredde):
                 if slangehoved[0]== x and slangehoved[1]== y:
-                    if slangehoved == frugt:
-                        score +=1
                     print("@", end = " ")
-                elif slangekrop[0][0] == x and slangekrop[0][1]==y:
+                elif (x, y) in slangekrop:#[0][0] == x and slangekrop[0][1]==y:
                     print ("H",end= " ")
                 elif frugt[0]== x and frugt[1]== y:
                     print("§", end = " ")
                 else:
                     print(".", end = " ") 
         #bevæg slange
+        if slangehoved == frugt:
+            frugt = (random.randint(0, bredde-1),random.randint(0, højde-1))
+            score = score + 1
+        else:
+            slangekrop.pop()
         slangekrop.insert(0,slangehoved)
-        
-        slangekrop.pop()
 
 
         (x, y) = slangehoved
@@ -73,7 +74,7 @@ while not done:
             slangehoved = (x, y+1)
         elif input == "d":
             slangehoved = (x+1, y)
-
+        print(f"score {score}")
 
 #   if msvcrt.kbhit():
 #       ch = msvcrt.getch()
