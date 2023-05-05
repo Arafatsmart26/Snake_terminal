@@ -64,7 +64,6 @@ while not done:
             slangekrop.pop()
         slangekrop.insert(0,slangehoved)
 
-
         (x, y) = slangehoved
         if input == "w":
             slangehoved = (x, y-1)
@@ -75,10 +74,3 @@ while not done:
         elif input == "d":
             slangehoved = (x+1, y)
         print(f"score {score}")
-
-#   if msvcrt.kbhit():
-#       ch = msvcrt.getch()
-#        if ch == b'd':
-#    
-#       print("you pressed",msvcrt.getch(),"so now i will quit")
-#        done = True
